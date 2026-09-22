@@ -1,0 +1,30 @@
+/* Columna flex a pantalla completa: el footer queda abajo aunque la página sea corta */
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout__header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.layout__main {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-lg) var(--spacing-md);
+}
+
+.layout__footer {
+  padding: var(--spacing-md);
+  text-align: center;
+  font-size: 0.875rem;
+  background-color: var(--color-secondary);
+  border-top: 1px solid var(--color-border);
+}
