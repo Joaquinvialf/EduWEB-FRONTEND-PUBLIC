@@ -1,0 +1,113 @@
+.signin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  padding: var(--spacing-lg) var(--spacing-md);
+}
+
+.signin__card {
+  width: min(100%, 720px);
+  background-color: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(74, 58, 255, 0.08);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.signin__header {
+  margin-bottom: var(--spacing-lg);
+}
+
+.signin__title {
+  font-size: clamp(1.8rem, 2vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+}
+
+.signin__subtitle {
+  margin-top: var(--spacing-sm);
+  color: #4a4a59;
+  font-size: 0.98rem;
+}
+
+.signin__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.signin__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.signin__label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.signin__input {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-secondary);
+  padding: 0.9rem 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.signin__input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(74, 58, 255, 0.12);
+}
+
+.signin__button {
+  margin-top: 0.5rem;
+  width: 100%;
+  border: none;
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary);
+  color: #ffffff;
+  padding: 0.9rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.signin__button:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.signin__button:active {
+  transform: translateY(1px);
+}
+
+.signin__login {
+  margin-top: 1.25rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #4a4a59;
+}
+
+.signin__login a {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.signin__login a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .signin {
+    padding: var(--spacing-md);
+  }
+
+  .signin__card {
+    padding: 1.25rem;
+  }
+}
