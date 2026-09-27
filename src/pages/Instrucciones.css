@@ -1,0 +1,132 @@
+.instructions-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.instructions-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  max-width: 70ch;
+  padding-top: var(--spacing-md);
+}
+
+.instructions-header h1 {
+  font-size: var(--font-size-xl);
+  letter-spacing: -0.04em;
+}
+
+.instructions-header p {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.instructions-main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.instructions-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  background-color: var(--color-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.instructions-section h2 {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-sm);
+}
+
+.instructions-section h3 {
+  font-size: 1.05rem;
+  color: var(--color-primary);
+}
+
+.instructions-section p,
+.instructions-section li,
+.instructions-section td,
+.instructions-section th {
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+.instructions-section ul,
+.instructions-section ol {
+  padding-left: 1.5rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.objective {
+  padding: 0.9rem 1rem;
+  border-left: 4px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  background-color: #ffffff;
+  border: 1px solid var(--color-border);
+}
+
+.objective strong {
+  color: var(--color-primary);
+}
+
+.instructions-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+  background-color: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.instructions-section th,
+.instructions-section td {
+  padding: 0.75rem 0.9rem;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+}
+
+.instructions-section thead {
+  background-color: var(--color-secondary);
+}
+
+.instructions-section tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.summary {
+  padding: var(--spacing-md);
+  background: linear-gradient(135deg, var(--color-secondary), #ffffff);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  line-height: 1.7;
+}
+
+.instructions-footer {
+  text-align: center;
+  font-weight: 600;
+  color: #4a4a59;
+  padding-bottom: var(--spacing-md);
+}
+
+@media (max-width: 600px) {
+  .instructions-header p {
+    font-size: 1.1rem;
+  }
+
+  .instructions-section {
+    padding: var(--spacing-md);
+  }
+
+  .instructions-section table {
+    display: block;
+    overflow-x: auto;
+  }
+}

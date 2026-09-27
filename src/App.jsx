@@ -5,6 +5,7 @@ import Landing from './pages/Landing.jsx'
 import Instrucciones from './pages/Instrucciones.jsx'
 import Nosotros from './pages/Nosotros.jsx'
 import Login from './pages/Login.jsx'
+import Signin from './pages/Signin.jsx'
 import Juego from './pages/Juego.jsx'
 import NoEncontrada from './pages/NoEncontrada.jsx'
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/instrucciones" element={<Instrucciones />} />
         <Route path="/nosotros" element={<Nosotros />} />
         <Route path="/login" element={<Login onLogin={iniciarSesion} />} />
+        <Route path="/register" element={<Signin />} />
         <Route path="/juego" element={<Juego usuario={usuario} />} />
         <Route path="*" element={<NoEncontrada />} />
       </Route>
