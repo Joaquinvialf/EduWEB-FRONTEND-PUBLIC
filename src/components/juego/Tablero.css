@@ -1,0 +1,118 @@
+.tablero-seccion {
+  margin-top: var(--spacing-lg);
+}
+
+.tablero {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  width: 100%;
+  aspect-ratio: 1;
+  grid-template-rows: repeat(8, minmax(0, 1fr));
+  margin-block: var(--spacing-sm);
+  border: 1px solid var(--color-border);
+  container-type: inline-size;
+}
+
+.casilla {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  min-width: 0;
+  color: var(--color-text);
+}
+
+.casilla--clara {
+  background-color: var(--color-secondary);
+}
+
+.casilla--oscura {
+  background-color: var(--color-border);
+}
+
+.casilla--especial {
+  box-shadow: inset 0 0 0 3px var(--color-primary);
+}
+
+.casilla--seleccionada {
+  outline: 3px solid var(--color-text);
+  outline-offset: -6px;
+}
+
+.casilla__coordenada {
+  position: absolute;
+  z-index: 1;
+  font-size: clamp(0.5rem, 1.8cqi, 0.75rem);
+  line-height: 1;
+}
+
+.casilla__especial {
+  position: absolute;
+  right: 4px;
+  bottom: 2px;
+  color: var(--color-primary-dark);
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
+.ficha,
+.casilla__destino {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: inherit;
+}
+
+.ficha {
+  font-family: 'Segoe UI Symbol', 'Apple Symbols', serif;
+  font-size: clamp(1.25rem, 8cqi, 3.5rem);
+  line-height: 1;
+}
+
+.ficha:not(:disabled),
+.casilla__destino {
+  cursor: pointer;
+}
+
+.ficha:disabled {
+  opacity: 1;
+}
+
+.ficha:focus-visible,
+.casilla__destino:focus-visible {
+  outline: 2px dashed var(--color-text);
+  outline-offset: -3px;
+}
+
+.casilla__coordenada,
+.casilla__especial {
+  pointer-events: none;
+}
+
+.tablero-seccion h2 {
+  font-size: var(--font-size-lg);
+}
+
+.tablero-seccion > p {
+  font-size: 0.875rem;
+}
+
+.casilla__coordenada--fila {
+  top: 3px;
+  left: 4px;
+}
+
+.casilla__coordenada--columna {
+  bottom: 3px;
+  left: 4px;
+}
+
+.ficha:not(:disabled):hover {
+  background-color: color-mix(in srgb, var(--color-primary) 12%, transparent);
+}

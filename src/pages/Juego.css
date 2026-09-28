@@ -1,0 +1,61 @@
+.juego {
+  display: grid;
+  gap: var(--spacing-lg);
+  min-width: 0;
+}
+
+.juego__encabezado {
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.juego__resumen,
+.juego__jugadores {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-sm) var(--spacing-lg);
+}
+
+.juego__resumen h1 {
+  font-size: var(--font-size-xl);
+}
+
+.juego__jugadores {
+  margin-top: var(--spacing-sm);
+  font-size: 0.875rem;
+}
+
+.juego__contenido {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+  grid-template-rows: auto 1fr;
+  align-items: start;
+  gap: var(--spacing-md) var(--spacing-lg);
+}
+
+.juego__contenido > * {
+  min-width: 0;
+}
+
+.juego__contenido > .tablero-seccion {
+  grid-row: 1 / 3;
+  margin-top: 0;
+}
+
+.juego__contenido > .bitacora {
+  grid-column: 2;
+}
+
+@media (max-width: 900px) {
+  .juego__contenido {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .juego__contenido > .tablero-seccion,
+  .juego__contenido > .bitacora {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}

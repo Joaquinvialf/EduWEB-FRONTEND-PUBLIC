@@ -1,0 +1,64 @@
+.panel-jugador {
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg);
+  overflow-wrap: anywhere;
+}
+
+.panel-jugador__seleccion {
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.panel-jugador__finalizar {
+  margin-top: var(--spacing-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  width: 100%;
+  border: none;
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  cursor: pointer;
+}
+
+.panel-jugador h2 {
+  font-size: var(--font-size-lg);
+}
+
+.panel-jugador__nombre {
+  margin-block: var(--spacing-sm);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+}
+
+.panel-jugador__energia {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-block: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  background-color: var(--color-secondary);
+}
+
+.panel-jugador__energia strong {
+  color: var(--color-primary);
+  font-size: var(--font-size-lg);
+}
+
+.panel-jugador__poder {
+  margin-top: var(--spacing-md);
+}
+
+.panel-jugador__finalizar:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.panel-jugador__finalizar:focus-visible {
+  outline: 2px solid var(--color-primary-dark);
+  outline-offset: 3px;
+}
