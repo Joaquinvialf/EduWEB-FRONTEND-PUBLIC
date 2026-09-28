@@ -47,7 +47,7 @@ function Landing({ usuario }) {
           </div>
         ) : (
           <div className="landing__acciones">
-            <Link to="/login" className="landing__boton landing__boton--principal">
+            <Link to="/register" className="landing__boton landing__boton--principal">
               Registrarse
             </Link>
             <Link to="/login" className="landing__boton landing__boton--secundario">

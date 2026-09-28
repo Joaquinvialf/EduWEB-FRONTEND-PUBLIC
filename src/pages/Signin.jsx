@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Signin.css";
-import users from"../data/mockUsers.json";
+import users from "../mocks/usuarios.json";
 
 function Signin() {
   const [nombre_usuario, setUsuarioNombre] = useState("");
@@ -89,7 +90,7 @@ function Signin() {
         </form>
 
         <p className="signin__login">
-          ¿Ya tienes una cuenta? <a href="/login">Inicia sesión</a>
+          ¿Ya tienes una cuenta? <Link to="/login">Inicia sesión</Link>
         </p>
       </div>
     </section>
