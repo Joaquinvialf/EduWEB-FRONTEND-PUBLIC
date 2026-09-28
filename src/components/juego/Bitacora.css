@@ -1,0 +1,40 @@
+.bitacora {
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow-wrap: anywhere;
+}
+
+.bitacora__acciones {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+}
+
+.bitacora__accion {
+  padding: var(--spacing-sm);
+  background-color: var(--color-secondary);
+  border-radius: var(--radius-md);
+}
+
+.bitacora h2 {
+  font-size: var(--font-size-lg);
+}
+
+.bitacora__acciones {
+  max-height: 240px;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  padding-right: var(--spacing-sm);
+  font-size: 0.875rem;
+}
+
+.bitacora__accion:first-child {
+  border-left: 3px solid var(--color-primary);
+}
+
+.bitacora__acciones:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
