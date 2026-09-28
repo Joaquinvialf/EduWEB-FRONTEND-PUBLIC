@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
-import users from"../data/mockUsers.json";
+import users from "../mocks/usuarios.json";
 
-function Login() {
+function Login({ onLogin }) {
+  const navigate = useNavigate();
   const [nombre_usuario, setUsuarioNombre] = useState("");
   const [password, setPassword] = useState("");
 
@@ -18,7 +20,9 @@ function Login() {
       return;
     }
 
-    // falta lógica para iniciar sesión, por ejemplo, guardar el usuario en el estado global o redirigir a otra página
+    // Igual que LOGIN_RESPONSE del protocolo: solo id y username, nunca la contraseña
+    onLogin({ id: user.id, username: user.username });
+    navigate("/");
   };
 
   return (
@@ -66,7 +70,7 @@ function Login() {
         </form>
 
         <p className="login__register">
-          ¿No tienes una cuenta? <a href="/register">Regístrate</a>
+          ¿No tienes una cuenta? <Link to="/register">Regístrate</Link>
         </p>
       </div>
     </section>

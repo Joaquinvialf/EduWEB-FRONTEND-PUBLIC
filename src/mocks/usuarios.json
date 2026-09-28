@@ -4,15 +4,15 @@
     "username": "eduardo",
     "password": "12345678",
     "ranking": 1,
-    "experiencia": 0,
-    "ejercito_id": 1
+    "experience": 0,
+    "army_id": 1
     },
     {
     "id": 2,
     "username": "maria",
     "password": "87654321",
     "ranking": 2,
-    "experiencia": 0,
-    "ejercito_id": 2
+    "experience": 0,
+    "army_id": 2
     }
 ]

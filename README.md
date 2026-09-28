@@ -24,11 +24,13 @@ npm run lint     # revisión con ESLint
 ```
 src/
   components/   componentes compartidos (Layout, Navbar)
-  pages/        una vista por archivo (Landing, Instrucciones, Nosotros, Login, Juego)
-  mocks/        datos mock (.json / .js)
+  pages/        una vista por archivo (Landing, Instrucciones, Nosotros, Login, Registro, Juego)
+  mocks/        datos mock (.json / .js) con el formato del protocolo
   styles/       reset.css con box-sizing y variables globales
-docs/           Entrega 1 y diagramas
+docs/           Entrega 1, diagramas y protocolo JSON
 ```
+
+El formato de los datos que intercambian cliente y servidor está en [`docs/protocolo.md`](docs/protocolo.md).
 
 ## Deploy
 

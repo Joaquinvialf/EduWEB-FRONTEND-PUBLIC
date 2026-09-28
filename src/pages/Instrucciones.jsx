@@ -171,14 +171,6 @@ function Instrucciones() {
                 <td>Rara</td>
                 <td>5</td>
               </tr>
-              <tr>
-                <td>Épica</td>
-                <td>7</td>
-              </tr>
-              <tr>
-                <td>Legendaria</td>
-                <td>9</td>
-              </tr>
             </tbody>
           </table>
 
